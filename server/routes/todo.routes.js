@@ -11,7 +11,7 @@ Router.post('/', (req, res) => {
     todo.save().then((doc) => {
         res.json(doc)
     }, (e) => {
-        res.send({error: e})
+        res.status(400).send({error: e})
     })
 
 })

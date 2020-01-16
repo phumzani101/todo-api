@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const express = require('express')
 const bodyParser = require('body-parser')
 
-const Todo = require('./model/todo.model')
+
 const User = require('./model/user.model')
 
 // Router
@@ -23,3 +23,5 @@ app.use('/todos', todoRouter)
 app.listen(PORT, () => {
     console.log('Started on port ' + PORT)
 })
+
+module.exports = {app}
